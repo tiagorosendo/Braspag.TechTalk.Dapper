@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frameworks\AdoNet.cs" />
+    <Compile Include="Frameworks\AdoNetAutoMapper.cs" />
+    <Compile Include="Frameworks\Dapper.cs" />
+    <Compile Include="Frameworks\EntityFramework.cs" />
     <Compile Include="Models\EnumFrameworks.cs" />
     <Compile Include="Models\IGetMerchantsScenario.cs" />
     <Compile Include="Models\IGetTransactionsScenario.cs" />
