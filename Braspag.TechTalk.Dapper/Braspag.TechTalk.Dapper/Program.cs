@@ -108,7 +108,7 @@ namespace Braspag.TechTalk.Dapper
                 {
                     Framework = EnumFrameworks.Entity,
                     RunNumber = i,
-                    Time = efTest.GetTransactions(i)
+                    Time = efTest.GetTransactions(Faker.RandomNumber.Next(1, 102000))
                 });
 
 
@@ -116,7 +116,7 @@ namespace Braspag.TechTalk.Dapper
                 {
                     Framework = EnumFrameworks.AdoNet,
                     RunNumber = i,
-                    Time = adoTest.GetTransactions(i)
+                    Time = adoTest.GetTransactions(Faker.RandomNumber.Next(1, 102000))
                 });
 
 
@@ -132,7 +132,7 @@ namespace Braspag.TechTalk.Dapper
                 {
                     Framework = EnumFrameworks.Dapper,
                     RunNumber = i,
-                    Time = dapperTest.GetTransactions(i)
+                    Time = dapperTest.GetTransactions(Faker.RandomNumber.Next(1, 102000))
                 });
             }
             ProcessResults(results);

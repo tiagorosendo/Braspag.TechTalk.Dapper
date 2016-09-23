@@ -139,15 +139,16 @@ namespace Braspag.TechTalk.Dapper.Frameworks
                         Id = reader.GetInt32(0),
                         TransactionId = reader.GetInt32(1),
                         RuleId = reader.GetInt32(2),
-                        AnalysisDate = reader.GetDateTime(3),
+                        Score = reader.GetInt32(3),
+                        AnalysisDate = reader.GetDateTime(4),
                         Transaction = new Transaction
                         {
-                            Id = reader.GetInt32(4),
-                            CardNumber = reader.GetString(5),
-                            HolderName = reader.GetString(6),
-                            OrderId = reader.GetString(7),
-                            TransactionDate = reader.GetDateTime(8),
-                            MerchantId = reader.GetInt32(9)
+                            Id = reader.GetInt32(5),
+                            CardNumber = reader.GetString(6),
+                            HolderName = reader.GetString(7),
+                            OrderId = reader.GetString(8),
+                            TransactionDate = reader.GetDateTime(9),
+                            MerchantId = reader.GetInt32(10)
                         }
                     };
                     report.Add(result);
