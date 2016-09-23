@@ -25,7 +25,7 @@ namespace Braspag.TechTalk.Dapper
         public static List<AnalysisResult> GetListAnalysResult(int numberOfTransactions = 5)
         {
             return Builder<AnalysisResult>.CreateListOfSize(numberOfTransactions).All()
-                .With(x => x.TransactionId = Faker.RandomNumber.Next(1, 100000)).Build().ToList();
+                .With(x => x.RuleId = Faker.RandomNumber.Next(1, 50)).Build().ToList();
         }
 
 
