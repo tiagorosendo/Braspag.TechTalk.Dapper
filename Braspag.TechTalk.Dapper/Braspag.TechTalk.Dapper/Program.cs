@@ -12,7 +12,7 @@ namespace Braspag.TechTalk.Dapper
 {
     class Program
     {
-        private const int NumberOfExecutions = 5;
+        private const int NumberOfExecutions = 4;
         private static void Main(string[] args)
         {
 
@@ -74,15 +74,6 @@ namespace Braspag.TechTalk.Dapper
                     RunNumber = i,
                     Time = adoTest.ReportTransactionsAnalyzed(i)
                 });
-
-
-                //results.Add(new TesteResults
-                //{
-                //    Framework = EnumFrameworks.AdoNetAutoMapper,
-                //    RunNumber = i,
-                //    Time = adoReaderTest.ReportTransactionsAnalyzed(i)
-                //});
-
 
                 results.Add(new TesteResults
                 {
@@ -241,7 +232,7 @@ namespace Braspag.TechTalk.Dapper
                     Console.WriteLine(orderResult.RunNumber + "\t\t" + orderResult.Time);
                 }
 
-                Console.WriteLine("Avenger Time #");
+                Console.WriteLine("Average Time #");
                 var avengerTimes = Math.Round(group.Average(x => x.Time), 2);
                 Console.WriteLine(avengerTimes);
             }
